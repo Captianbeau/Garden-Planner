@@ -1,0 +1,45 @@
+:root{
+--midMauve: #896b79;
+--midBrown:#9e7e6e;
+--lightYellow:#fffcbd;
+--lightGreen:#b8cca4;
+--darkBlue:#0d7676;
+--darkRed:#984a4a;
+}
+html,body{
+    background-color: var(--lightGreen);
+    
+}
+body{
+    
+}
+header{
+    background-color: var(--darkRed);
+    
+}
+h1{
+    font-size: 50px;
+    padding-bottom: 50px;
+    padding-top:20px;
+    margin-left: 20px;
+    color:antiquewhite;
+}
+.search{
+    background-color: var(--lightYellow);
+    padding:20px;
+}
+.button{
+    background: var(--midMauve);
+    color:antiquewhite;
+}
+.favorites{
+    background-color: var(--midBrown);
+    font-size:30px;
+}
+a{
+    text-decoration: none;
+    color:antiquewhite;
+}
+footer{
+    
+}
