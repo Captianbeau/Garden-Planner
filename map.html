@@ -15,21 +15,32 @@ gmp-map {
 
 /* Optional: Makes the sample page fill the window. */
 html,
-.map {
+body {
   height: 75%;
   margin: 0;
   padding: 0;
   width: 75%;
 }
+input{
+    height: 50px;
+    width: 75%
+}
     </style>
   </head>
   <body>
-    <input type="text">
-<gmp-map class="map">
+    <input type="text" placeholder="Enter your Address...">
     <gmp-map center="40.297691345214844,-111.6943588256836" zoom="14" map-id="DEMO_MAP_ID">
       <gmp-advanced-marker position="40.297691345214844,-111.6943588256836" title="My location">
       </gmp-advanced-marker>
     </gmp-map>
-</gmp-map>
+    <iframe
+    width="400"
+    height="400"
+    frameborder="0" style="border:0"
+    referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBwIyNhmaxYu2SbGV7ZkwxI064fWd8TXNg&q=Orem UT"
+    allowfullscreen>
+  </iframe>
+
   </body>
 </html>
