@@ -7,13 +7,14 @@ var requestOptions = {
 };
 //Fetch Plant API, not the queries in the URL to get desired search results
 fetch(`https://perenual.com/api/species-list?key=sk-5oBn655d7588a54043071&edible=1&hardiness=1-13&page=1`, requestOptions)
-//Parse  
-.then(response => response.json())
-//Check if there is a result, then console log result and run function  
-.then(result => {
+  //Parse  
+  .then(response => response.json())
+  //Check if there is a result, then console log result and run function  
+  .then(result => {
     console.log(result);
     if (result.data && result.data.length > 0) {
       displayPlants(result);
+      displayPlantCard(result);
       //console.log(result.data[0].common_name)
     } else {
       console.log('No results found.');
@@ -30,10 +31,26 @@ var displayPlants = function (result) {
     var plantCommonName = result.data[i].common_name;
     console.log(plantCommonName)
     //create li element on search page
-    var resultItem =document.createElement("li")
+    var resultItem = document.createElement("li")
     //create text for li
     resultItem.textContent = plantCommonName
     //append li to ul in the aside
     searchResults.appendChild(resultItem)
   }
+}
+
+var displayPlantCard = function (result) {
+  //connect to HTML element
+  var plantCard = document.querySelector("#plantCard");
+  //pull common name from data
+  var plantImage = document.querySelector("#plantImage");
+  console.log(plantImage)
+  var plantImg = result.data[0].default_image.regular_url;
+  console.log(result.data[0].default_image.regular_url)
+  //create li element on search page
+  var plantImgEl = document.createElement("img")
+  //create text for li
+  plantImgEl.setAttribute("src", plantImg)
+  //append li to ul in the aside
+  plantImage.append(plantImgEl)
 }

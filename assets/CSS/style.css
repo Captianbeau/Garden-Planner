@@ -1,63 +1,63 @@
 
 :root{
---midMauve: #896b79;
---midBrown:#9e7e6e;
---lightYellow:#fffcbd;
---lightGreen:#b8cca4;
---darkBlue:#0d7676;
---darkRed:#984a4a;
-}
-body{
-    background-color: var(--lightGreen);
-    min-height: 100vh;
-    display:flex;
-    flex-direction: column;
-}
-header{
-    background-color: var(--darkRed);
+    --midMauve: #896b79;
+    --midBrown:#9e7e6e;
+    --lightYellow:#fffcbd;
+    --lightGreen:#b8cca4;
+    --darkBlue:#0d7676;
+    --darkRed:#984a4a;
+    }
+    body{
+        background-color: var(--lightGreen);
+        min-height: 100vh;
+        display:flex;
+        flex-direction: column;
+    }
+    header{
+        background-color: var(--darkRed);
+        
+    }
+    h1{
+        font-size: 50px;
+        /* padding-bottom: 30px;
+        padding-top:20px;
+        margin-left: 20px; */
+        color:antiquewhite;
+    }
+    nav{
+      margin-left:60%;
+      font-size: 30px;  
+      
+    }
+    .navOb{
+      color:antiquewhite;  
+    }
+    a{
+        text-decoration: none;
+        color:antiquewhite;
+    }
+    .search{
+        background-color: var(--lightYellow);
+        padding:20px;
+    }
+    .button{
+        background: var(--midMauve);
+        color:antiquewhite;
+    }
+    .favorites{
+        background-color: var(--midBrown);
+        font-size:30px;
+    }
+    .info{
+        background-color: var(--midMauve);
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
     
-}
-h1{
-    font-size: 50px;
-    /* padding-bottom: 30px;
-    padding-top:20px;
-    margin-left: 20px; */
-    color:antiquewhite;
-}
-nav{
-  margin-left:60%;
-  font-size: 30px;  
-  
-}
-.navOb{
-  color:antiquewhite;  
-}
-a{
-    text-decoration: none;
-    color:antiquewhite;
-}
-.search{
-    background-color: var(--lightYellow);
-    padding:20px;
-}
-.button{
-    background: var(--midMauve);
-    color:antiquewhite;
-}
-.favorites{
-    background-color: var(--midBrown);
-    font-size:30px;
-}
-.info{
-    background-color: var(--midMauve);
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
-footer{
-   margin-top:auto; 
-   
-}
-.base{
-   background-color: var(--darkBlue); 
-}
+    footer{
+       margin-top:auto; 
+       
+    }
+    .base{
+       background-color: var(--darkBlue); 
+    }
