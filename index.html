@@ -13,25 +13,38 @@
 <body>
     <header class="level hero ">
         <h1 class="hero-body">Garden Planner</h1>
-        <!-- navigation bar  -->
-
-        <nav id="navigation" class="hero-foot navbar-menu">
+        <!-- nav disappears for mobile -->
+        <nav id="navigation-desktop" class="hero-foot navbar-menu">
             <a href="./favorites.html" class="navOb navbar-item">Favorites</a>
             <a id="navGarden_tips" class="navOb navbar-item">Garden Tips</a>
         </nav>
+
+        <!-- mobile navigation needs functionality -->
+        <div id="navigation-mobile" class="dropdown column is-full">
+            <div class="dropdown-trigger">
+                <button class="button is-medium is-fullwidth"> Navigation</button>
+            </div>
+            <div class="dropdown-menu">
+                <div class="dropdown-content">
+                    <a href="./favorites.html" class="dropdown-item">Favorites</a>
+            <a id="navGarden_tips" class="dropdown-item">Garden Tips</a>
+                </div>
+            </div>
+        </div>
     </header>
+    
     <div class="tile is-ansestor">
     <aside class="tile is-parent is-3 is-vertical ">
         <section class="search tile is-child box">
             <form id="general_search" class="tile is-child">
                 <p>Search</p>
                 <input class="input is-inline">
-                <button class="button is-rounded is-inline">Search</button>
+                <button class="searchBtn button is-rounded is-inline">Search</button>
             </form>
             <form id="Location_search"class="tile is-child ">
                 <p>Search by Location</p>
                 <input class="input is-inline">
-                <button class="button is-rounded is-inline">Search</button>
+                <button class="searchBtn button is-rounded is-inline">Search</button>
             </form>
         </section>
         <section class="favorites tile is-child box">
