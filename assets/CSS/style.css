@@ -34,6 +34,16 @@ nav{
 #navigation-mobile{
     display:none;
 }
+.navMenu{
+display: none;
+}
+.navContent{
+    background-color: var(--midMauve);
+    
+}
+.navItem{
+color: var(--white);   
+}
 a{
     text-decoration: none;
     color:var(--white);
