@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style2.css">
+    
     <link rel="stylesheet" href=".assets/CSS/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style2.css">
+    <title>Favorites</title>
 </head>
 <body>
-    <header class="hero"></header>
-        <h1 class=>GARDEN PLANNER</h1>
-        <nav class="hero-foot">
-            <div class="hero-head">
+    <header class="">
+        <h1 class="">GARDEN PLANNER</h1>
+        <nav class="">
+            <div class="">
                 <a href="">MAIN</a>
             </div>          
             <div>
@@ -20,43 +21,30 @@
             </div>
         </nav>
     </header>
-    <main class="tile is-ancestor">
-        <section class="tile is-parent">
-          <div class="tile is-child">
-            <p class="title">Favorites</p>
-            <p>content</p>
-          </div>
-          <div class="tile is-child box">
-            <p class="title">One</p>
-            <p>content.</p>
-          </div>
+    <aside class="">
+       <h2>Favorites</h2>
+       <ul class="favoriteList"></ul>
+    </aside>
+    <main id="plantCard">
+        <div class="picture" id="plantImage">
+            <p>image</p>
         </div>
-        <div class="tile is-parent">
-          <div class="tile is-child box">
-            <p class="title">Two</p>
-            <p>content</p>
-          </div>
-        </section>
+        <div class="info">
+            <p>plant information</p>
+            <ol id="plantInfo"></ol>
+        </div>
+        <div class="advInfo">
+            <p>advanced plant info</p>
+        </div>
     </main>
-    
+    <footer class="base">
+        <p>yay</p>
+    </footer>
     
     
 
     
-    <aside class="is-flex tile is-ancestor>
-        <div> style="flex: 0 0 30% tile is-4 is-vertical is-parent">Favorites</div>
-        <div style="flex: 0 0 70%">
-            <div class="is-flex">
-                <div style="flex: 0 0 50%; height: 200px">Col1</div>
-                <div style="flex: 0 0 50%">
-                    <div>Display Data 1: <span id="data-1"></span></div>
-                    <div>Display Data 2: <span id="data-2"></span></div>
-                </div>
-            </div>
-            <Section class=""></Section>
-            <div>Row2</div>
-        </div>
-    </aside>
+
     <script src="./javascript.js"></script>
 </body>
 </html>
