@@ -1,45 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    <!-- TODO add functionality to dropdown and website information/image (image styling) -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/CSS/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/CSS/style.css">
     <title>Garden Planner</title>
 </head>
 
 <body>
-    <header>
-        <h1>Garden Planner</h1>
-        <!-- navigation bar  -->
+    <header class="level hero ">
+        <h1 class="hero-body">Garden Planner</h1>
+        <!-- nav disappears for mobile -->
+        <nav id="navigation-desktop" class="hero-foot navbar-menu">
+            <a href="./favorites.html" class="navOb navbar-item">Favorites</a>
+            <a id="navGarden_tips" class="navOb navbar-item">Garden Tips</a>
+        </nav>
+
+        <!-- mobile navigation needs functionality -->
+        <div id="navigation-mobile" class="dropdown column is-full">
+            <div class="dropdown-trigger">
+                <button class="button is-medium is-fullwidth"> Navigation</button>
+            </div>
+            <div class="dropdown-menu">
+                <div class="dropdown-content">
+                    <a href="./favorites.html" class="dropdown-item">Favorites</a>
+            <a id="navGarden_tips" class="dropdown-item">Garden Tips</a>
+                </div>
+            </div>
+        </div>
     </header>
-    <aside>
-        <section>
-            <form id="general_search">
+
+    <div class="tile is-ansestor">
+    <aside class="tile is-parent is-3 is-vertical ">
+        <section class="search tile is-child box">
+            <form id="general_search" class="tile is-child">
                 <p>Search</p>
-                <input>
-                <button>Search</button>
+                <input class="input is-inline">
+                <button class="searchBtn button is-rounded is-inline">Search</button>
             </form>
-            <form id="Location_search">
+            <form id="Location_search"class="tile is-child ">
                 <p>Search by Location</p>
-                <input>
-                <button>Search</button>
+                <input class="input is-inline">
+                <button class="searchBtn button is-rounded is-inline">Search</button>
             </form>
         </section>
-        <section>
+        <section class="favorites tile is-child box">
             <h3><a href="./favorites.html">Favorites</a></h3>
             <h3><a href="./results.html">Garden Tips</a></h3>
             <link id="garden_tips">
         </section>
     </aside>
-    <main>
+
+    <main class="info tile is-parent box">
         <p>
-        Welcome to the garden planner!
+        Welcome to the garden planner! 
             <!-- website information -->
         </p>
     </main>
+</div>
+
+<footer class="base footer">
+    <p>la</p>
+</footer>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/plant_api.js"></script>
 
 </body>
 
