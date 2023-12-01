@@ -52,8 +52,15 @@ a{
 
 /* aside start */
 .search{
-    background-color: var(--lightYellow);
+    /* background-color: var(--lightYellow); */
+    background-image:url(../pictures/backgroundVines.png);
+    background-size: 300px;
     padding:20px;
+}
+.searchP{
+    background-color: var(--lightGreen);
+    display:inline;
+    padding:5px
 }
 .button{
     background: var(--midMauve);
