@@ -9,7 +9,7 @@ var zipCodeData = fetch(filePath).then(response => response.json()).then(data =>
     return data
 })
 
-var zone = {}
+var zoneData = {}
 buttonEl.on('click',function(event){
     event.preventDefault();
     var buttonClickedID = event.target.parentNode.id
@@ -19,7 +19,7 @@ buttonEl.on('click',function(event){
     if (buttonClickedID && buttonClickedID == "Location_search"){
         console.log(zipCodeData)
         fetch(filePath).then(response => response.json()).then(data =>{
-            var zone = data.find(obj => obj['zipcode'] == input)
+            zoneData = data.find(obj => obj['zipcode'] == input)
             console.log(zone)
         })
     }
