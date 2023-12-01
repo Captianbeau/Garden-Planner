@@ -1,37 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/CSS/reset.css">
-    <link rel="stylesheet" href="./assets/CSS/style.css">
-    <title>Garden Planner Favorites</title>
+    <link rel="stylesheet" href="./assets/css/style2.css">
+    <link rel="stylesheet" href=".assets/CSS/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css">
+    <title>Document</title>
 </head>
-
 <body>
-    <header>
-        <h1>Garden Planner</h1>
-        <!-- navigation bar  -->
+    <header class="hero"></header>
+        <h1 class=>GARDEN PLANNER</h1>
+        <nav class="hero-foot">
+            <div class="hero-head">
+                <a href="">MAIN</a>
+            </div>          
+            <div>
+                <a href="">GARDENING TIPS</a>
+            </div>
+        </nav>
     </header>
-    <aside>
-        <h2>Favorite PLants</h2>
-        <ul>
-            <li>Plant 1</li>
-            <li>Plant 2</li>
-        </ul>
-    </aside>
-    <main>
-        <div>
-            <p>image</p>
+    <main class="tile is-ancestor">
+        <section class="tile is-parent">
+          <div class="tile is-child">
+            <p class="title">Favorites</p>
+            <p>content</p>
+          </div>
+          <div class="tile is-child box">
+            <p class="title">One</p>
+            <p>content.</p>
+          </div>
         </div>
-        <div>
-            <p>plant information</p>
-        </div>
-        <div>
-            <p>advanced plant info</p>
-        </div>
+        <div class="tile is-parent">
+          <div class="tile is-child box">
+            <p class="title">Two</p>
+            <p>content</p>
+          </div>
+        </section>
     </main>
-</body>
+    
+    
+    
 
+    
+    <aside class="is-flex tile is-ancestor>
+        <div> style="flex: 0 0 30% tile is-4 is-vertical is-parent">Favorites</div>
+        <div style="flex: 0 0 70%">
+            <div class="is-flex">
+                <div style="flex: 0 0 50%; height: 200px">Col1</div>
+                <div style="flex: 0 0 50%">
+                    <div>Display Data 1: <span id="data-1"></span></div>
+                    <div>Display Data 2: <span id="data-2"></span></div>
+                </div>
+            </div>
+            <Section class=""></Section>
+            <div>Row2</div>
+        </div>
+    </aside>
+    <script src="./javascript.js"></script>
+</body>
 </html>
