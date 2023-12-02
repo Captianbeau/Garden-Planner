@@ -1,95 +1,77 @@
 
-plantID = "671";
-plantKey = "sk-5oBn655d7588a54043071";
-plantURL = "https://perenual.com/api/species/details/" + plantID + "?key=" + plantKey;
-
-//Set request option variable
-var requestOptions = {
-  method: 'GET',
-  redirect: 'follow',
-};
-//Fetch Plant API, not the queries in the URL to get desired search results
-fetch(plantURL, requestOptions)
-  //Parse  
-  .then(response => response.json())
-  //Check if there is a result, then console log result and run function  
-  .then(result => {
-   // console.log(result);
-    displayPlantCard(result);
-    //console.log(result.common_name)
-  });
-
-
-
-
-
-
-
-
-  var displayPlantCard = function (result) {
-  //connect to HTML element
-
-
+//Function to display info on plant card
+var displayPlantCard = function (result) {
+  //define list where info plant will be populated
+  plantInfo = document.querySelector("#plantInfo");
+  //clear any data in plant info section
+  plantInfo.innerHTML = "";
+  //define variable for image area
   var plantImage = document.querySelector("#plantImage");
-  //pull image from data
+//Clear any data in image section
+  plantImage.innerHTML = ""
+  //variable to pull image from data
   var plantImg = result.default_image.small_url;
-  //create li element on search page
+  //create img element in HTML
   var plantImgEl = document.createElement("img")
-  //create text for li
+ // Set attribute and src for img in HTML
   plantImgEl.setAttribute("src", plantImg)
-  //append li to ul in the aside
+  //append image to HTML
   plantImage.append(plantImgEl)
-
 
   //Items to append to list in plant info
 
+  //Create li for plant info
   var plantCommonNameLi = document.createElement("li")
+  //Create variable that pulls common name for plant
   var plantCommonName = result.common_name;
+  //Set class for created li
+  plantCommonNameLi.setAttribute("class", "card-list-item");
+  //Create test for li
   plantCommonNameLi.textContent = "Common name: " + plantCommonName;
+  //Append li to list
   plantInfo.appendChild(plantCommonNameLi)
+
+  //Repeat for desired data
+  var plantTypeLi = document.createElement("li")
+  var plantType = result.type;
+  plantTypeLi.setAttribute("class", "card-list-item");
+  plantTypeLi.textContent = "Type: " + plantType;
+  plantInfo.appendChild(plantTypeLi);
 
   var plantCycleLi = document.createElement("li")
   var plantCycle = result.cycle;
+  plantCycleLi.setAttribute("class", "card-list-item");
   plantCycleLi.textContent = "Cycle: " + plantCycle;
   plantInfo.appendChild(plantCycleLi);
 
   var plantMaintenanceLi = document.createElement("li")
   var plantMaintenance = result.maintenance;
+  plantMaintenanceLi.setAttribute("class", "card-list-item");
   plantMaintenanceLi.textContent = "Maintenance: " + plantMaintenance;
   plantInfo.appendChild(plantMaintenanceLi);
 
   var plantSunlightLi = document.createElement("li")
   var plantSunlight = result.sunlight;
+  plantSunlightLi.setAttribute("class", "card-list-item");
   plantSunlightLi.textContent = "Sunlight: " + plantSunlight;
   plantInfo.appendChild(plantSunlightLi);
 
   var plantWateringLi = document.createElement("li")
   var plantWatering = result.watering;
+  plantWateringLi.setAttribute("class", "card-list-item");
   plantWateringLi.textContent = "Watering: " + plantWatering;
   plantInfo.appendChild(plantWateringLi);
 
   var plantHardinessLi = document.createElement("li")
   var plantHardinessMin = result.hardiness.min;
   var plantHardinessMax = result.hardiness.max;
+  plantHardinessLi.setAttribute("class", "card-list-item");
   plantHardinessLi.textContent = "Hardiness Zone: " + plantHardinessMin + "-" + plantHardinessMax;
   plantInfo.appendChild(plantHardinessLi);
 
   var plantDimensionLi = document.createElement("li")
   var plantDimension = result.dimension;
+  plantDimensionLi.setAttribute("class", "card-list-item");
   plantDimensionLi.textContent = "Dimensions, " + plantDimension;
   plantInfo.appendChild(plantDimensionLi);
-
-
-
-  var plantAttractsLi = document.createElement("li")
-  var plantAttracts= result.attracts;
-  plantAttractsLi.textContent = "Attracts: " + plantAttracts;
-  plantInfo.appendChild(plantAttractsLi);
-
-  var plantTypeLi = document.createElement("li")
-  var plantType= result.type;
-  plantTypeLi.textContent = "Type: " + plantType;
-  plantInfo.appendChild(plantTypeLi);
-
-
 }
