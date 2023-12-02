@@ -1,66 +1,3 @@
-// // var searchByLocationButton = document.getElementById()
-// var buttonEl = $('button')
-// var inputEl = $('input')
-
-// const filePath = './assets/docs/data.json'
-
-// var zipCodeData = fetch(filePath).then(response => response.json()).then(data =>{
-//     // console.log(data)
-//     return data
-// })
-
-// var zoneData = {}
-// var zipCode = ''
-// function getZipCode(city) {
-//     const apiKey = 'AIzaSyBwYeLd2bVkQbfhrXRnBLNd_EmkzSREn6E';
-//     const geocodingApiUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(city)}&key=${apiKey}`;
-//     // Step 1: Get coordinates (latitude and longitude) for the city
-//     fetch(geocodingApiUrl)
-//       .then(response => response.json())
-//       .then(data => {
-//         if (data.status === 'OK' && data.results.length > 0) {
-//           const location = data.results[0].geometry.location;
-//           const reverseGeocodingApiUrl = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${location.lat},${location.lng}&key=${apiKey}`;
-  
-//           // Step 2: Reverse geocode to get detailed address information
-//           fetch(reverseGeocodingApiUrl)
-//             .then(response => response.json())
-//             .then(data => {
-//               if (data.status === 'OK' && data.results.length > 0) {
-//                 const addressComponents = data.results[0].address_components;
-  
-//                 // Find the zip code from the address components
-//                 zipCode = addressComponents.find(component => component.types.includes('postal_code')).long_name;
-//                 return zipCode
-//               }
-//             })
-//             // .catch(error => console.error('Error fetching reverse geocoding data:', error));
-//         }
-//       })
-//       // .catch(error => console.error('Error fetching geocoding data:', error));
-      
-//   }
-// buttonEl.on('click',function(event){
-//     event.preventDefault();
-//     var buttonClickedID = event.target.parentNode.id
-//     var input = document.getElementById(buttonClickedID).children[1].value
-//     // var zipCode = input;
-
-//     // if (input.includes(/^[a-zA-Z]+$/.)){
-//     let x = getZipCode(input)
-//     // }
-    
-    
-//     if (buttonClickedID && buttonClickedID == "Location_search"){
-//         console.log(zipCodeData)
-//         fetch(filePath).then(response => response.json()).then(data =>{
-//             zoneData = data.find(obj => obj['zipcode'] == x)
-//             console.log(zoneData)
-//         })
-//     }
-// })
-
-
 // Selecting elements
 const buttonEl = $('button');
 const inputEl = $('input');
@@ -116,14 +53,13 @@ buttonEl.on('click', function (event) {
 
   // Get zip code from the input city
   getZipCode(input)
-    .then(x => {
+    .then(zipCode => {
       if (buttonClickedID && buttonClickedID === 'Location_search') {
-        console.log(zipCodeData);
         // Fetch zone data based on the obtained zip code
         fetch(filePath)
           .then(response => response.json())
           .then(data => {
-            zoneData = data.find(obj => obj['zipcode'] === x);
+            zoneData = data.find(obj => obj['zipcode'] === zipCode);
             console.log(zoneData);
           });
       }
