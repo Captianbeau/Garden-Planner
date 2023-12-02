@@ -16,22 +16,32 @@
         <!-- navigation bar  -->
     </header>
     <aside >
+        <form id="general_search" class="tile is-child">
+            <p>Search</p>
+            <input class="input is-inline" id="searchInput" >
+            <button class="button is-rounded is-inline" id="searchButton">Search</button>
+        </form>
         <h2>Search Results</h2>
         <ul id="searchResults"></ul>
+        <button class="button is-rounded is-inline" id="previousPage">Previous Page</button>
+        <button class="button is-rounded is-inline" id="nextPage">Next Page</button>
     </aside>
-    <main>
-        <div>
+    <main id="plantCard">
+        <div class="picture" id="plantImage">
             <p>image</p>
         </div>
-        <div>
+        <div class="info">
             <p>plant information</p>
+            <ol id="plantInfo"></ol>
         </div>
-        <div>
+        <div class="advInfo">
             <p>advanced plant info</p>
         </div>
     </main>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/plant_api.js"></script>
+    <script src="./assets/js/plant_search.js"></script>
+    <script src="./assets/js/plant_card.js"></script>
 </body>
 
 </html>
