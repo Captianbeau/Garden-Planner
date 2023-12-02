@@ -21,6 +21,13 @@ buttonEl.on('click',function(event){
         fetch(filePath).then(response => response.json()).then(data =>{
             var zone = data.find(obj => obj['zipcode'] == input)
             console.log(zone)
+            for (var i = 3; i<13; i++) {
+console.log(i)
+            if (zone.zone === i + "a" || zone.zone === i || zone.zone === i+"b"  ) {
+                var searchParameter= i; }
+            sessionStorage.setItem("searchParameterKey", searchParameter)
+            }
+        
         })
     }
 })

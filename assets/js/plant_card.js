@@ -7,16 +7,21 @@ var displayPlantCard = function (result) {
   plantInfo.innerHTML = "";
   //define variable for image area
   var plantImage = document.querySelector("#plantImage");
-//Clear any data in image section
+  //Clear any data in image section
   plantImage.innerHTML = ""
-  //variable to pull image from data
-  var plantImg = result.default_image.small_url;
-  //create img element in HTML
-  var plantImgEl = document.createElement("img")
- // Set attribute and src for img in HTML
-  plantImgEl.setAttribute("src", plantImg)
-  //append image to HTML
-  plantImage.append(plantImgEl)
+
+  if (!result.default_image || !result.default_image.thumbnail) {
+
+  } else {
+    //variable to pull image from data
+    var plantImg = result.default_image.small_url;
+    //create img element in HTML
+    var plantImgEl = document.createElement("img")
+    // Set attribute and src for img in HTML
+    plantImgEl.setAttribute("src", plantImg)
+    //append image to HTML
+    plantImage.append(plantImgEl)
+  }
 
   //Items to append to list in plant info
 
@@ -74,4 +79,45 @@ var displayPlantCard = function (result) {
   plantDimensionLi.setAttribute("class", "card-list-item");
   plantDimensionLi.textContent = "Dimensions, " + plantDimension;
   plantInfo.appendChild(plantDimensionLi);
+
+  var idNumber = result.id;
+  var saveButton = document.createElement("button");
+  saveButton.setAttribute("class", "save-button");
+  saveButton.setAttribute("id", idNumber );
+  saveButton.textContent = "Save to Favorites";
+  plantInfo.append(saveButton);
+
+  var deleteButton = document.createElement("button");
+  deleteButton.setAttribute("class", "remove-button");
+  deleteButton.setAttribute("id", idNumber );
+  deleteButton.textContent = "Remove from Favorites";
+  plantInfo.append(deleteButton);
+
+  var removeFromFavorites =function() {
+    var plantFavorites = JSON.parse(localStorage.getItem("plantFavorites"));
+    var index = plantFavorites.indexOf(idNumber);
+    var x = plantFavorites.splice(index, 1);
+    localStorage.setItem("plantFavorites", JSON.stringify(plantFavorites));
+    window.location.reload();
+  }
+
+  var saveToFavorites = function () {
+    console.log("save");
+  var plantFavorites = JSON.parse(localStorage.getItem("plantFavorites"));
+  if(plantFavorites == null){
+  var  plantFavorites =[];
+  plantFavorites.push(idNumber);
+  localStorage.setItem("plantFavorites", JSON.stringify(plantFavorites));
+  } else {
+    if ( !plantFavorites.includes(idNumber)) {
+      plantFavorites.push(idNumber);
+      localStorage.setItem("plantFavorites", JSON.stringify(plantFavorites));
+      
+    }
+  }
+}
+    var saveButton = document.querySelector(".save-button");
+    var deleteButton = document.querySelector(".remove-button");
+    deleteButton.addEventListener("click", removeFromFavorites);
+    saveButton.addEventListener("click", saveToFavorites);
 }
