@@ -4,59 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style2.css">
-    <link rel="stylesheet" href=".assets/CSS/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css">
+    <link rel="stylesheet" href=".assets/CSS/reset.css">
+
     <title>Document</title>
 </head>
 <body>
-    <header class="hero"></header>
-        <h1 class=>GARDEN PLANNER</h1>
-        <nav class="hero-foot">
-            <div class="hero-head">
+    <header>
+        <h1>GARDEN PLANNER</h1>
+        <nav>
+            <div>
                 <a href="">MAIN</a>
             </div>          
-            <div>
+            <div ></div>
                 <a href="">GARDENING TIPS</a>
             </div>
         </nav>
     </header>
-    <main class="tile is-ancestor">
-        <section class="tile is-parent">
-          <div class="tile is-child">
-            <p class="title">Favorites</p>
+    <div class="tile is-ancestor" >
+        <aside class="tile is-parent is-vertical is-3"
+        >
+        <div class="tile is-child box" id="list">
+        <h2 class="list-title">Favorites</h2>
+        <ul>
+            <li>placeholder</li>
+        <li>placeholder</li>
+        <li>placeholder</li>
+        </ul>
+    </div>
+    </aside>
+   <main class="tile is-parent " >
+        <section class="tile is-child box" id="content">
+          <div>
+            <h2 class="list-title">Plant Name:</h2> 
+            <figure class="image is-5by4">
+            <img  src="./assets/pictures/Garden-PlannerWireFramemain-Full.png" >
+            </figure>
             <p>content</p>
           </div>
-          <div class="tile is-child box">
-            <p class="title">One</p>
-            <p>content.</p>
-          </div>
-        </div>
-        <div class="tile is-parent">
-          <div class="tile is-child box">
-            <p class="title">Two</p>
-            <p>content</p>
-          </div>
+          
         </section>
     </main>
-    
-    
-    
-
-    
-    <aside class="is-flex tile is-ancestor>
-        <div> style="flex: 0 0 30% tile is-4 is-vertical is-parent">Favorites</div>
-        <div style="flex: 0 0 70%">
-            <div class="is-flex">
-                <div style="flex: 0 0 50%; height: 200px">Col1</div>
-                <div style="flex: 0 0 50%">
-                    <div>Display Data 1: <span id="data-1"></span></div>
-                    <div>Display Data 2: <span id="data-2"></span></div>
-                </div>
-            </div>
-            <Section class=""></Section>
-            <div>Row2</div>
-        </div>
-    </aside>
-    <script src="./javascript.js"></script>
+    </div>
 </body>
 </html>
