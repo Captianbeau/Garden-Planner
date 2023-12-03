@@ -15,7 +15,9 @@
         <h1>Garden Planner</h1>
         <!-- navigation bar  -->
     </header>
-    <aside>
+<div class="tile is-ansestor">
+    <aside class="tile is-parent">
+        
         <form id="general_search" class="tile is-child">
             <p>Search</p>
             <input class="input is-inline" id="searchInput" >
@@ -26,7 +28,7 @@
         <button class="button is-rounded is-inline" id="previousPage">Previous Page</button>
         <button class="button is-rounded is-inline" id="nextPage">Next Page</button>
     </aside>
-    <main id="plantCard">
+    <main id="plantCard" class="tile is-parent">
         <div class="picture" id="plantImage">
             <p>image</p>
         </div>
@@ -38,6 +40,7 @@
             <p>advanced plant info</p>
         </div>
     </main>
+</div>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/plant_api.js"></script>
     <script src="./assets/js/plant_search.js"></script>
