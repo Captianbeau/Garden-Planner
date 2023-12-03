@@ -14,6 +14,8 @@ buttonEl.on('click',function(event){
     event.preventDefault();
     var buttonClickedID = event.target.parentNode.id
     var input = document.getElementById(buttonClickedID).children[1].value
+    var buttonID = event.target.id;
+    console.log(buttonID);
    
     
     if (buttonClickedID && buttonClickedID == "Location_search"){
