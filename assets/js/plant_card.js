@@ -4,7 +4,7 @@ var displayPlantCard = function (result) {
   //define list where info plant will be populated
   plantInfo = document.querySelector("#plantInfo");
   //clear any data in plant info section
-  plantInfo.innerHTML = "";
+  //plantInfo.innerHTML = "";
   //define variable for image area
   var plantImage = document.querySelector("#plantImage");
   //Clear any data in image section
@@ -34,7 +34,10 @@ var displayPlantCard = function (result) {
   //Create test for li
   plantCommonNameLi.textContent = "Common name: " + plantCommonName;
   //Append li to list
-  plantInfo.appendChild(plantCommonNameLi)
+  plantInfo.appendChild(plantCommonNameLi);
+  var cardTitle = document.querySelector("#card-title");
+  cardTitle.textContent = plantCommonName
+
 
   //Repeat for desired data
   var plantTypeLi = document.createElement("li")
