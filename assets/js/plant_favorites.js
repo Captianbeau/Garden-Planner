@@ -1,4 +1,4 @@
-plantKey = "sk-lgBK656bbc410c0fd3277"
+plantKey = "sk-dEiS6566b7ba813383181"
 var requestOptions = {
     method: 'GET',
     redirect: 'follow',
@@ -40,7 +40,7 @@ var displayFavoritePlantsPage = function () {
                     //create li element on search page
                     var resultItem = document.createElement("li");
                     //add class to created li
-                    resultItem.setAttribute("class", "list-item");
+                    resultItem.setAttribute("class", "tile is-child box");
                     //add the ID code as id for li
                     resultItem.setAttribute("id", plantID);
                     //create text for li
