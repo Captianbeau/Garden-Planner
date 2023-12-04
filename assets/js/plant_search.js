@@ -1,15 +1,51 @@
-//set session storage to contain search parameters
+
+    //set session storage to contain search parameters
 var searchParameter = sessionStorage.getItem("searchParameterKey");
 var searchResults = document.getElementById("searchResults");
 pageNum = 1
+    
+    
+    var searchParameters = JSON.parse(sessionStorage.getItem("searchParameterKey"))
+    
+    console.log(searchParameters.search)
+    
+    if (searchParameters.button === "searchButton") {
+        searchPlantURL = "https://perenual.com/api/species-list?key=" + plantKey + "&q=" + searchParameters.search + "&edible=1&hardiness=1-13&page=" + pageNum;
+    }
+    if (searchParameters.button === "locationButton") {
+        console.log("load a location search page")
+        searchPlantURL = "https://perenual.com/api/species-list?key=" + plantKey + "&edible=1&hardiness=" + searchParameters.search + "&page=" + pageNum;
+    }
+    if (searchParameters.button === "browseButton") {
+       console.log("load a browse page")
+        searchPlantURL = "https://perenual.com/api/species-list?key=" + plantKey + "&edible=1&hardiness=1-13&page=" + pageNum;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //clear any results in the search results field
 //searchResults.innerHTML = ""
 //Set URL for search function
-searchPlantURL = "https://perenual.com/api/species-list?key=" + plantKey + "&q=" + searchParameter + "&edible=1&hardiness=1-13&page=" + pageNum;
+//searchPlantURL = "https://perenual.com/api/species-list?key=" + plantKey + "&q=" + searchParameter + "&edible=1&hardiness=1-13&page=" + pageNum;
 //fetch results based on search term
 fetch(searchPlantURL, requestOptions)
     .then(response => response.json())
     .then(result => {
+        //console.log(result)
         if (result.data && result.data.length > 0) {
             displayPlants(result);
             
@@ -75,12 +111,12 @@ var clickSearchList = function (event) {
     var idNumber = event.target.id
     //define url to use for plant cards
     plantURL = "https://perenual.com/api/species/details/" + idNumber + "?key=" + plantKey;
-
     //Fetch Plant API with specific plant ID
     fetch(plantURL, requestOptions)
         //Parse  
         .then(response => response.json())
         .then(result => {
+            console.log(result);
             // run function display plant card
             displayPlantCard(result);
         });

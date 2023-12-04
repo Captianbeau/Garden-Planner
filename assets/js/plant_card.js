@@ -29,6 +29,7 @@ var displayPlantCard = function (result) {
   var plantCommonNameLi = document.createElement("li")
   //Create variable that pulls common name for plant
   var plantCommonName = result.common_name;
+  console.log(plantCommonName);
   //Set class for created li
   plantCommonNameLi.setAttribute("class", "card-list-item");
   //Create test for li
