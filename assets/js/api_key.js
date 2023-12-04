@@ -1,5 +1,5 @@
 //Set key for accessing API
-plantKey = "sk-s0yi6566b7ea6d0b63180";
+plantKey = "sk-qWo06566be1c917ee3070";
 
 var requestOptions = {
     method: 'GET',
