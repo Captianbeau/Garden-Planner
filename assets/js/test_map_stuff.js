@@ -1,6 +1,6 @@
 // Selecting elements
-const buttonEl = $('button');
-const inputEl = $('input');
+const buttonEl = document.getElementById('locationButton');
+const inputEl = document.getElementById('locationInput');
 
 // File path for JSON data
 const filePath = './assets/docs/data.json';
@@ -37,26 +37,6 @@ function getZipCode(city) {
               // Find the zip code from the address components
               zipCode = addressComponents.find(component => component.types.includes('postal_code')).long_name;
               return zipCode;
-
-var zone = {}
-buttonEl.on('click',function(event){
-    event.preventDefault();
-    var buttonClickedID = event.target.parentNode.id
-    var input = document.getElementById(buttonClickedID).children[1].value
-    var buttonID = event.target.id;
-    console.log(buttonID);
-   
-    
-    if (buttonClickedID && buttonClickedID == "Location_search"){
-        console.log(zipCodeData)
-        fetch(filePath).then(response => response.json()).then(data =>{
-            var zone = data.find(obj => obj['zipcode'] == input)
-            console.log(zone)
-            for (var i = 3; i<13; i++) {
-console.log(i)
-            if (zone.zone === i + "a" || zone.zone === i || zone.zone === i+"b"  ) {
-                var searchParameter= i; }
-            sessionStorage.setItem("searchParameterKey", searchParameter)
             }
           });
       }
@@ -64,8 +44,9 @@ console.log(i)
 }
 
 // Event listener for button click
-buttonEl.on('click', function (event) {
+buttonEl.addEventListener('click', function (event) {
   event.preventDefault();
+  var buttonID = event.target.id;
 
   // Get button clicked ID and input value
   const buttonClickedID = event.target.parentNode.id;
@@ -73,18 +54,31 @@ buttonEl.on('click', function (event) {
 
   // Get zip code from the input city
   getZipCode(input)
-    .then(zipCode => {
+    .then(x => {
       if (buttonClickedID && buttonClickedID === 'Location_search') {
-        // console.log(zipCodeData);
         // Fetch zone data based on the obtained zip code
         fetch(filePath)
           .then(response => response.json())
           .then(data => {
-            zoneData = data.find(obj => obj['zipcode'] === zipCode);
+            zoneData = data.find(obj => obj['zipcode'] === x);
             console.log(zoneData);
+
+            var zone = zoneData.zone
+            for (var i = 3; i < 13; i++) {
+              // console.log(i)
+              if (zone === i + "a" || zone === i || zone === i + "b") {
+                var hardinessZone = i;
+                console.log(hardinessZone)
+              }
+              sessionStorage.setItem("searchParameterKey", hardinessZone)
+              var searchParameters = {
+                button: buttonID,
+                search: hardinessZone
+            }
+            sessionStorage.setItem("searchParameterKey", JSON.stringify(searchParameters));
+            window.location.href = "./results.html";
+            }
           });
       }
     });
 });
-
-
