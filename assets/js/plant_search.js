@@ -1,5 +1,7 @@
 //set session storage to contain search parameters
-var searchParameter = sessionStorage.getItem("searchParameterKey")
+var searchParameter = sessionStorage.getItem("searchParameterKey");
+var searchResults = document.getElementById("searchResults");
+pageNum = 1
 //clear any results in the search results field
 //searchResults.innerHTML = ""
 //Set URL for search function
@@ -10,40 +12,65 @@ fetch(searchPlantURL, requestOptions)
     .then(result => {
         if (result.data && result.data.length > 0) {
             displayPlants(result);
+            
         } else {
             var noResultItem = document.createElement("li")
             noResultItem.setAttribute("class", "list-item")
             //create text for li
-            noResultItem.textContent = "Sorry, No Results Found";
+            noResultItem.textContent = 'Sorry, No Results Found. Tip: Avoid using plurals ex: "peppers vs pepper" Tip: Not everything is in our free database, try using "Browse"';
             //append li to ul in the aside
             searchResults.appendChild(noResultItem)
+
+            var tip1ResultItem = document.createElement("li")
+            tip1ResultItem.setAttribute("class", "list-item")
+            //create text for li
+            tip1ResultItem.textContent = 'Tip: Avoid using plurals ex: use"pepper", not peppers"';
+            //append li to ul in the aside
+            searchResults.appendChild(tip1ResultItem)
+            var tip2ResultItem = document.createElement("li")
+            tip2ResultItem.setAttribute("class", "list-item")
+            //create text for li
+            tip2ResultItem.textContent = 'Tip: Not everything is in our free database, try using "Browse" to see what is available';
+            //append li to ul in the aside
+            searchResults.appendChild(tip2ResultItem)
         }
     });
+
 //Create function to display plants on search page
 var displayPlants = function (result) {
     //For loop to display all results
     for (var i = 0; i < result.data.length; i++) {
         //Determine if the result is available on free API (first 3000 plants available)
         if (result.data[i].id < 3001) {
-            //get common name from data
-            var plantCommonName = result.data[i].common_name;
-            //get ID code from data
-            var plantID = result.data[i].id;
-            //create li element on search page
-            var resultItem = document.createElement("li");
-            //add class to created li
-            resultItem.setAttribute("class", "list-item");
-            //add the ID code as id for li
-            resultItem.setAttribute("id", plantID);
-            //create text for li
-            resultItem.textContent = plantCommonName;
+           //get common name from data
+           var plantCommonName = result.data[i].common_name;
+           //get ID code from data
+           var plantID = result.data[i].id;
+           //create li element on search page
+           var resultItem = document.createElement("li");
+           //add class to created li
+           resultItem.setAttribute("class", "list-item");
+           //add the ID code as id for li
+           resultItem.setAttribute("id", plantID);
+           //create text for li
+           resultItem.textContent = plantCommonName;  
+           if (!result.data[i].default_image || !result.data[i].default_image.thumbnail) {
+           } else {
+            var plantThumbnail = result.data[i].default_image.thumbnail;
+            var plantThumbnailEL = document.createElement("img")
+            plantThumbnailEL.setAttribute("src", plantThumbnail)
+            plantThumbnailEL.setAttribute("class", "thumbnail")
+            resultItem.appendChild(plantThumbnailEL)
+        }
             //append li to ul in the aside
-            searchResults.appendChild(resultItem);
+            searchResults.appendChild(resultItem);   
         }
     }
 }
 //Event listener to click on search result li and display plant card
-searchResults.addEventListener("click", function (event) {
+
+
+var clickSearchList = function (event) {
     //set li id as the id number to use in url
     var idNumber = event.target.id
     //define url to use for plant cards
@@ -57,4 +84,6 @@ searchResults.addEventListener("click", function (event) {
             // run function display plant card
             displayPlantCard(result);
         });
-})
+}
+
+searchResults.addEventListener("click", clickSearchList);

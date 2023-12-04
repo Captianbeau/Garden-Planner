@@ -1,10 +1,9 @@
 //Set key for accessing API
-plantKey = "sk-qWo06566be1c917ee3070";
+plantKey = "sk-lgBK656bbc410c0fd3277";
 
-pageNum = 1;
 //Set variable for search button
 searchButton = document.getElementById("searchButton");
-
+locationSearchButton = document.getElementById("location-search")
 var searchResults = document.querySelector("#searchResults");
 var requestOptions = {
   method: 'GET',
@@ -21,29 +20,3 @@ if (!searchParameter.value) {
   sessionStorage.setItem("searchParameterKey", searchParameter.value);
   window.location.href = "./results.html";}
 })
-
-
-
-
-
-
-
-
-
-//plantURL = "https://perenual.com/api/species-list?key=" + plantKey + "&edible=1&hardiness=1-13&page=" + pageNum;
-
-//browsePlantURL = "https://perenual.com/api/species-list?key=" + plantKey + "&edible=1&hardiness=1-13&page=" + pageNum;
-//Set request option variable
-
-//searchPlantURL = "https://perenual.com/api/species-list?key=" + plantKey + "&q=" + searchParameter + "&edible=1&hardiness=1-13&page=" + pageNum;
-
-
-// fetch(searchPlantURL, requestOptions)
-//   .then(response => response.json())
-//   .then(result => {
-//     if (result.data && result.data.length > 0) {
-//       displayPlants(result);
-//     } else {
-//       console.log('No results found.');
-//     }
-//   });
