@@ -4,7 +4,7 @@ var displayPlantCard = function (result) {
   //define list where info plant will be populated
   plantInfo = document.querySelector("#plantInfo");
   //clear any data in plant info section
-  //plantInfo.innerHTML = "";
+  plantInfo.innerHTML = "";
   //define variable for image area
   var plantImage = document.querySelector("#plantImage");
   //Clear any data in image section
@@ -29,7 +29,6 @@ var displayPlantCard = function (result) {
   var plantCommonNameLi = document.createElement("li")
   //Create variable that pulls common name for plant
   var plantCommonName = result.common_name;
-  console.log(plantCommonName);
   //Set class for created li
   plantCommonNameLi.setAttribute("class", "card-list-item");
   //Create test for li
@@ -38,7 +37,6 @@ var displayPlantCard = function (result) {
   plantInfo.appendChild(plantCommonNameLi);
   var cardTitle = document.querySelector("#card-title");
   cardTitle.textContent = plantCommonName
-
 
   //Repeat for desired data
   var plantTypeLi = document.createElement("li")
@@ -106,7 +104,6 @@ var displayPlantCard = function (result) {
   }
 
   var saveToFavorites = function () {
-    console.log("save");
   var plantFavorites = JSON.parse(localStorage.getItem("plantFavorites"));
   if(plantFavorites == null){
   var  plantFavorites =[];

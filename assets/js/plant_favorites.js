@@ -27,7 +27,6 @@ var displayFavoritePlantsPage = function () {
             .then(response => response.json())
             .then(result => {
                 if (result) {
-                    console.log(result)
                     //get common name from data
                     var plantCommonName = result.common_name;
                     //get ID code from data
@@ -52,7 +51,6 @@ var displayFavoritePlantsPage = function () {
                     searchResults.appendChild(resultItem);
 
                 } else {
-                    console.log(result)
                     var noResultItem = document.createElement("li")
                     noResultItem.setAttribute("class", "list-item")
                     //create text for li

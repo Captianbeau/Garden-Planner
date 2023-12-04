@@ -67,7 +67,9 @@ buttonEl.addEventListener('click', function (event) {
             for (var i = 3; i < 13; i++) {
               // console.log(i)
               if (zone === i + "a" || zone === i || zone === i + "b") {
-                var hardinessZone = i;
+                var lower = i-2
+                var upper = i+2
+                var hardinessZone = lower + "-" + upper ;
                 console.log(hardinessZone)
               }
               sessionStorage.setItem("searchParameterKey", hardinessZone)
