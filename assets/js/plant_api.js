@@ -10,7 +10,6 @@ searchButton.addEventListener("click", function (event) {
   event.preventDefault();
   var buttonID = event.target.id;
   var searchInput = document.getElementById("searchInput");
-  console.log(buttonID);
   if (!searchInput.value) {
       return null
   } else {
@@ -27,7 +26,6 @@ locationButton.addEventListener("click", function (event) {
   event.preventDefault()
   
   var buttonID = event.target.id;
-  console.log(buttonID)
   if (!locationInput.value) {
       return null
   } else {
@@ -43,7 +41,6 @@ locationButton.addEventListener("click", function (event) {
 browseButton.addEventListener("click", function (event) {
   event.preventDefault()
   var buttonID = event.target.id;
-  console.log(buttonID)
       var searchParameters = {
           button: buttonID,
           search: 0

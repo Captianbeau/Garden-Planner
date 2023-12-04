@@ -45,7 +45,6 @@ pageNum = 1
 fetch(searchPlantURL, requestOptions)
     .then(response => response.json())
     .then(result => {
-        //console.log(result)
         if (result.data && result.data.length > 0) {
             displayPlants(result);
             
@@ -116,7 +115,6 @@ var clickSearchList = function (event) {
         //Parse  
         .then(response => response.json())
         .then(result => {
-            console.log(result);
             // run function display plant card
             displayPlantCard(result);
         });
