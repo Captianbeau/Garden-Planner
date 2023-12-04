@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,58 +11,61 @@
 
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <h1>GARDEN PLANNER</h1>
         <nav>
             <div>
                 <a href="">MAIN</a>
-            </div>          
-            <div ></div>
-                <a href="">GARDENING TIPS</a>
+            </div>
+            <div></div>
+            <a href="">GARDENING TIPS</a>
             </div>
         </nav>
     </header>
-    <div class="tile is-ancestor" >
-        <aside class="tile is-parent is-vertical is-3"
-        >
-        <div class="tile is-child box" id="list">
-        <h2 class="list-title" id="search-results">Favorites</h2>
-        <ul class="tile is-parent is-vertical" id="searchResults">
-        </ul>
-    </div>
-    </aside>
-   <main class="tile is-parent " >
-        <section class="tile is-child box" id="content">
-          <div>
-            <h2 class="list-title" id="card-title"></h2> 
-            <figure class="image is-5by4" id="plantImage">
-            
-            </figure>
-            <p>content</p>
-          </div>
-          
-        </section>
-    </main>
-
-    <aside class="is-flex tile is-ancestor">
-        <div style="flex: 0 0 30% tile is-4 is-vertical is-parent">Favorites</div>
-        <div style="flex: 0 0 70%">
-            <div class="is-flex">
-                <div style="flex: 0 0 50%; height: 200px">Col1</div>
-                <div style="flex: 0 0 50%">
-                    <ul id="plantInfo"></ul>
-                    <!-- <div>Display Data 1: <span id="data-1"></span></div>
-                    <div>Display Data 2: <span id="data-2"></span></div> -->
-                </div>
+    <div class="tile is-ancestor">
+        <aside class="tile is-parent is-vertical is-3">
+            <div class="tile is-child box" id="list">
+                <h2 class="list-title" id="search-results">Favorites</h2>
+                <ul class="tile is-parent is-vertical" id="searchResults">
+                </ul>
             </div>
-            <Section class=""></Section>
-            <div>Row2</div>
-        </div>
-    </aside>
-    <script src="./assets/js/plant_favorites.js"></script>
-    <script src="./assets/js/plant_card.js"></script>
+        </aside>
+        <main class="tile is-parent ">
+            <section class="tile is-child box" id="content">
+                <div>
+                    <h2 class="list-title" id="card-title"></h2>
+                    <figure class="image is-5by4" id="plantImage">
+
+                    </figure>
+                    <p>content</p>
+                </div>
+
+            </section>
+        </main>
+
+        <aside class="is-flex tile is-ancestor">
+            <div style="flex: 0 0 30% tile is-4 is-vertical is-parent">Favorites</div>
+            <div style="flex: 0 0 70%">
+                <div class="is-flex">
+                    <div style="flex: 0 0 50%; height: 200px">Col1</div>
+                    <div style="flex: 0 0 50%">
+                        <ul id="plantInfo"></ul>
+                        <!-- <div>Display Data 1: <span id="data-1"></span></div>
+                    <div>Display Data 2: <span id="data-2"></span></div> -->
+                    </div>
+                </div>
+                <Section class=""></Section>
+                <div>Row2</div>
+            </div>
+        </aside>
+        <script src="./assets/js/api_key.js"></script>
+        <script src="./assets/js/plant_favorites.js"></script>
+        <script src="./assets/js/plant_card.js"></script>
+        
     </div>
 
 </body>
+
 </html>

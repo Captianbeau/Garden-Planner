@@ -1,8 +1,3 @@
-plantKey = "sk-dEiS6566b7ba813383181"
-var requestOptions = {
-    method: 'GET',
-    redirect: 'follow',
-};
 var plantFavorites = JSON.parse(localStorage.getItem("plantFavorites"))
 //console.log(plantFavorites)
 
