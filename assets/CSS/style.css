@@ -86,6 +86,22 @@ a{
     margin-right: 10px;
     margin-bottom: 10px;
 }
+.info{
+    background-color: var(--midMauve);
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+#paragraph-1 {
+    background-color:#0d7676;
+    color:antiquewhite
+}
+.contentTitle {
+    background-color: #B8CCA4;
+}
+.tip {
+    background-color:#984a4a;
+    color:antiquewhite;
+}
 /* footer start */
 footer{
    margin-top:auto; 
