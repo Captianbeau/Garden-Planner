@@ -84,13 +84,13 @@ var displayPlantCard = function (result) {
 
   var idNumber = result.id;
   var saveButton = document.createElement("button");
-  saveButton.setAttribute("class", "save-button");
+  saveButton.setAttribute("class", "save-button Btn button is-rounded is-small");
   saveButton.setAttribute("id", idNumber );
   saveButton.textContent = "Save to Favorites";
   plantInfo.append(saveButton);
 
   var deleteButton = document.createElement("button");
-  deleteButton.setAttribute("class", "remove-button");
+  deleteButton.setAttribute("class", "remove-button Btn button is-rounded is-small");
   deleteButton.setAttribute("id", idNumber );
   deleteButton.textContent = "Remove from Favorites";
   plantInfo.append(deleteButton);
