@@ -37,7 +37,19 @@ nav{
     color:var(--white); 
     margin-left: 5px; 
   }
-
+  #navigation-mobile{
+    display:none;
+}
+.navMenu{
+display: none;
+}
+.navContent{
+    background-color: var(--midMauve);
+    
+}
+.navItem{
+color: var(--white);   
+}
 #list {
     background-image:url(../pictures/background-tomato.png) ;
     background-size: 120px;
@@ -76,7 +88,7 @@ nav{
 }
 .plantImage{
     background-image: url(../pictures/background-spiderPlant.png);
-    background-size: 1000px;
+    background-size: 240%;
 }
 .plantSpace{
     background-color: var(--lightYellow);
@@ -89,3 +101,8 @@ footer{
  .base{
     background-color: #0d7676;
  }
+ @media screen and (max-width:992px) {
+    #navigation-mobile{
+        display:inline;
+    }
+}
