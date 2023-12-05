@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/pictures/favicon.jpg" type="image/x-icon">
     <link rel="stylesheet" href="./assets/CSS/reset.css">
-    <link rel="stylesheet" href="./assets/css/style2.css">
     <link rel="stylesheet" href="./assets/CSS/search.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css">
+    <link rel="stylesheet" href="./assets/css/style2.css">
+    
+    
     <title>Garden Planner Search Results</title>
 </head>
 
 <body>
-    <header>
-        <h1>Garden Planner</h1>
+    <header class="level hero">
+        <h1 class="hero-body">Garden Planner</h1>
         <nav>
             <div>
                 <a href="index.html">MAIN</a>
@@ -27,65 +29,31 @@
     <div class="tile is-ancestor" >
         <aside class="tile is-parent is-vertical is-3">
             <div class="tile is-child box" id="list">
-                <form id="general_search" class="tile is-child">
-                    <p>Search</p>
-                    <input class="input is-inline" id="searchInput" >
-                    <button class="button is-rounded is-inline" id="searchButton">Search</button>
-                </form>
                 <h2 class="list-title" id="search-results">Search Results</h2>
                 <ul class="tile is-parent is-vertical" id="searchResults">
                 </ul>
             </div>
         </aside>
-        <main class="tile is-parent ">
-            <section class="tile is-child box" id="content">
-                <div>
-                    <h2 class="list-title" id="card-title"></h2>
-                    <figure class="image is-5by4" id="plantImage">
-
-                    </figure>
-                    <p>content</p>
-                </div>
-
-            </section>
-        </main>
-        <aside class="is-flex tile is-ancestor">
-            <div style="flex: 0 0 30% tile is-4 is-vertical is-parent">Search Results</div>
-           
-            <div style="flex: 0 0 70%">
-                <div class="is-flex">
-                    <div style="flex: 0 0 50%; height: 200px">Col1</div>
-                    <div style="flex: 0 0 50%">
-                        <ul id="plantInfo"></ul>
-                        <!-- <div>Display Data 1: <span id="data-1"></span></div>
-                    <div>Display Data 2: <span id="data-2"></span></div> -->
+        <main class="tile is-parent">
+            <section class="tile is-child is-5 box" id="content">
+                <div class="tile is-parent is-vertical">
+                    <div class="titleTile tile is-child is-5 box">
+                    <h2 class=" list-title" id="card-title"></h2>
                     </div>
+
+                    <div class="plantImage tile is-child is-11 box">
+                    <figure class="image is-1by1" id="plantImage">
+                        
+                    </figure>
+                    </div>   
                 </div>
-                <Section class=""></Section>
-                <div>Row2</div>
-            </div>
-        </aside>
-        
-        
-        <aside >
-      
-        <!-- <h2>Search Results</h2>
-        <ul id="searchResults"></ul>
-        <button class="button is-rounded is-inline" id="previousPage">Previous Page</button>
-        <button class="button is-rounded is-inline" id="nextPage">Next Page</button>
-    </aside>
-    <main id="plantCard" class="tile is-parent">
-        <div class="picture" id="plantImage">
-            <p>image</p>
-        </div>
-        <div class="info">
-            <p>plant information</p>
-            <ol id="plantInfo"></ol>
-        </div>
-        <div class="advInfo">
-            <p>advanced plant info</p>
-        </div>
-    </main> -->
+            </section>
+          <p class="plantInfo tile is-child is-4 box"></p> 
+                  
+        </main>
+        <footer class="base footer">
+        </footer>
+
     <script src="./assets/js/api_key.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/plant_search.js"></script>
