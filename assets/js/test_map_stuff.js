@@ -3,7 +3,7 @@ const buttonEl = document.getElementById('locationButton');
 const inputEl = document.getElementById('locationInput');
 
 // File path for JSON data
-const filePath = '../docs/data.json';
+const filePath = 'https://captianbeau.github.io/Garden-Planner/assets/docs/data.json';
 
 // Fetching zip code data
 const zipCodeData = fetch(filePath)
@@ -61,7 +61,7 @@ buttonEl.addEventListener('click', function (event) {
           .then(response => response.json())
           .then(data => {
             zoneData = data.find(obj => obj['zipcode'] === x);
-            console.log(zoneData);
+            //console.log(zoneData);
 
             var zone = zoneData.zone
             for (var i = 3; i < 13; i++) {
@@ -70,7 +70,7 @@ buttonEl.addEventListener('click', function (event) {
                 var lower = i-2
                 var upper = i+2
                 var hardinessZone = lower + "-" + upper ;
-                console.log(hardinessZone)
+                //console.log(hardinessZone)
               }
               sessionStorage.setItem("searchParameterKey", hardinessZone)
               var searchParameters = {
