@@ -81,11 +81,7 @@ a{
 /* aside end */
 
 /*.info is main*/
-.info{
-    background-color: var(--midMauve);
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
+
 .info{
     background-color: var(--midMauve);
     margin-right: 10px;
@@ -93,7 +89,7 @@ a{
 }
 #paragraph-1 {
     background-color:#0d7676;
-    color:antiquewhite
+    color:antiquewhite;
 }
 .contentTitle {
     background-color: #B8CCA4;
