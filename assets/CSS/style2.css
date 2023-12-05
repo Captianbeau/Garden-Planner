@@ -75,7 +75,8 @@ nav{
     font-size: 40px;
 }
 .plantImage{
-    background-color: var(--midMauve);
+    background-image: url(../pictures/background-spiderPlant.png);
+    background-size: 1000px;
 }
 .plantSpace{
     background-color: var(--lightYellow);
