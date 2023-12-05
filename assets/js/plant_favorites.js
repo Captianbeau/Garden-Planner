@@ -34,7 +34,7 @@ var displayFavoritePlantsPage = function () {
                     //create li element on search page
                     var resultItem = document.createElement("li");
                     //add class to created li
-                    resultItem.setAttribute("class", "tile is-child box");
+                    resultItem.setAttribute("class", "list-item tile is-child box");
                     //add the ID code as id for li
                     resultItem.setAttribute("id", plantID);
                     //create text for li
@@ -52,7 +52,7 @@ var displayFavoritePlantsPage = function () {
 
                 } else {
                     var noResultItem = document.createElement("li")
-                    noResultItem.setAttribute("class", "list-item")
+                    noResultItem.setAttribute("class", "list-item tile is-child box")
                     //create text for li
                     noResultItem.textContent = "Sorry, No Favorites Found";
                     //append li to ul in the aside
