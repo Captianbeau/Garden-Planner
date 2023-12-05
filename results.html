@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/pictures/favicon.jpg" type="image/x-icon">
     <link rel="stylesheet" href="./assets/CSS/reset.css">
-    <link rel="stylesheet" href="./assets/CSS/search.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css">
     <link rel="stylesheet" href="./assets/css/style2.css">
 
@@ -17,14 +16,19 @@
 <body>
     <header class="level hero">
         <h1 class="hero-body">Garden Planner</h1>
+
+         <!-- nav disappears for mobile -->
         <nav class="hero-foot navbar-menu">
             <a href="index.html" class="navOb navbar-item">Home</a>
             <a href="favorites.html" class="navOb navbar-item">Favorites</a>
         </nav>
+
+        <!--mobile navigation  -->
         <div id="navigation-mobile" class="dropdown column is-full ">
             <div class="dropdown-trigger">
                 <button class="Btn button is-medium is-fullwidth"> Navigation</button>
             </div>
+
             <div class="navMenu hero is-small">
                 <div class="dropdown-content  navContent">
                     <a href="./favorites.html" class="navItem dropdown-item">Favorites</a>
@@ -33,12 +37,15 @@
             </div>
         </div>
     </header>
+
     <div class="tile is-ancestor">
         <aside class="tile is-parent is-vertical is-3">
             <div class="tile is-child box" id="list">
                 <h2 class="list-title" id="search-results">Search Results</h2>
+
                 <ul class="tile is-parent is-vertical" id="searchResults">
                 </ul>
+
                 <nav class="pagination is-rounded" role="navigation" aria-label="pagination">
                     <a class="Btn pagination-previous" id="previous">Previous</a>
                     <a class="Btn pagination-next" id="next">Next page</a>
@@ -46,6 +53,7 @@
             </div>
 
         </aside>
+
         <main class="tile is-parent">
             <section class="tile is-child is-5 box" id="content">
                 <div class="tile is-parent is-vertical">
@@ -55,19 +63,20 @@
 
                     <div class="plantImage tile is-child is-11 box">
                         <figure class="image is-1by1" id="plantImage">
-
                         </figure>
                     </div>
                 </div>
             </section>
+
             <section class="plantSpace tile is-child is-4 box">
                 <p id="plantInfo"></p>
             </section>
         </main>
     </div>
-    <footer class="base footer">
-    </footer>
 
+    <footer class="base footer"> </footer>
+
+    
     <script src="./assets/js/api_key.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/plant_search.js"></script>
