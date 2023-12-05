@@ -12,11 +12,9 @@ var checkParameters = function () {
         searchPlantURL = "https://perenual.com/api/species-list?key=" + plantKey + "&q=" + searchParameters.search + "&edible=1&hardiness=1-13&page=" + pageNum;
     }
     if (searchParameters.button === "locationButton") {
-        console.log("load a location search page")
         searchPlantURL = "https://perenual.com/api/species-list?key=" + plantKey + "&edible=1&hardiness=" + searchParameters.search + "&page=" + pageNum;
     }
     if (searchParameters.button === "browseButton") {
-        console.log("load a browse page")
         searchPlantURL = "https://perenual.com/api/species-list?key=" + plantKey + "&edible=1&hardiness=1-13&page=" + pageNum;
     }
 
