@@ -17,9 +17,7 @@ body{
         
     }
 
-
-
-
+/* header*/
 header {
     background-color: var(--darkRed);
     color:antiquewhite;
@@ -28,6 +26,7 @@ header {
 h1{
     font-size: 50px;  
 }
+/* navigation start */
 nav{
     margin-left:60%;
     font-size: 30px;  
@@ -50,6 +49,9 @@ display: none;
 .navItem{
 color: var(--white);   
 }
+/* navigation and header end */
+
+/* aside- search/saved item list */
 #list {
     background-image:url(../pictures/background-tomato.png) ;
     background-size: 120px;
@@ -77,6 +79,9 @@ color: var(--white);
     background: var(--midMauve);
     color:var(--white);
 }
+/* aside end */
+
+/* main- plant content */
 #content {
     background-color: var(--lightGreen);
 }
@@ -93,7 +98,9 @@ color: var(--white);
 .plantSpace{
     background-color: var(--lightYellow);
 }
+/* main end */
 
+/* footer */
 footer{
     margin-top:auto; 
     
@@ -101,6 +108,9 @@ footer{
  .base{
     background-color: #0d7676;
  }
+ /* footer end */
+
+ /* media queries */
  @media screen and (max-width:992px) {
     #navigation-mobile{
         display:inline;
