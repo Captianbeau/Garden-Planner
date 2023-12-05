@@ -29,20 +29,20 @@ var checkParameters = function () {
 
             } else {
                 var noResultItem = document.createElement("li")
-                noResultItem.setAttribute("class", "list-item")
+                noResultItem.setAttribute("class", "list-item tile is-child box")
                 //create text for li
                 noResultItem.textContent = 'Sorry, No Results Found. Tip: Avoid using plurals ex: "peppers vs pepper" Tip: Not everything is in our free database, try using "Browse"';
                 //append li to ul in the aside
                 searchResults.appendChild(noResultItem)
 
                 var tip1ResultItem = document.createElement("li")
-                tip1ResultItem.setAttribute("class", "list-item")
+                tip1ResultItem.setAttribute("class", "list-item tile is-child box")
                 //create text for li
                 tip1ResultItem.textContent = 'Tip: Avoid using plurals ex: use"pepper", not peppers"';
                 //append li to ul in the aside
                 searchResults.appendChild(tip1ResultItem)
                 var tip2ResultItem = document.createElement("li")
-                tip2ResultItem.setAttribute("class", "list-item")
+                tip2ResultItem.setAttribute("class", "list-item tile is-child box")
                 //create text for li
                 tip2ResultItem.textContent = 'Tip: Not everything is in our free database, try using "Browse" to see what is available';
                 //append li to ul in the aside
@@ -63,7 +63,7 @@ var displayPlants = function (result) {
             //create li element on search page
             var resultItem = document.createElement("li");
             //add class to created li
-            resultItem.setAttribute("class", "list-item");
+            resultItem.setAttribute("class", "list-item tile is-child box");
             //add the ID code as id for li
             resultItem.setAttribute("id", plantID);
             //create text for li

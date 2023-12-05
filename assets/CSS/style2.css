@@ -39,13 +39,32 @@ nav{
   }
 
 #list {
+    background-image:url(../pictures/background-tomato.png) ;
+    background-size: 120px;
+    justify-content: center;
+}
+.list-title{
+   text-align: center;
     background-color: var(--lightYellow);
 }
 .list-item{
     background-color: var(--lightGreen);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-
+.thumbnail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    padding-right:10px;
+}
+.Btn{
+    background: var(--midMauve);
+    color:var(--white);
+}
 #content {
     background-color: var(--lightGreen);
 }
