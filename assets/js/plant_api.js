@@ -36,6 +36,7 @@ locationButton.addEventListener("click", function (event) {
       sessionStorage.setItem("searchParameterKey", JSON.stringify(searchParameters));
       //window.location.href = "./results.html";
   }
+  searchInput.text = "";
 })
 
 browseButton.addEventListener("click", function (event) {

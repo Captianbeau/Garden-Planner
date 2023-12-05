@@ -7,7 +7,6 @@ pageNum = 1
     
     var searchParameters = JSON.parse(sessionStorage.getItem("searchParameterKey"))
     
-    console.log(searchParameters.search)
     
     if (searchParameters.button === "searchButton") {
         searchPlantURL = "https://perenual.com/api/species-list?key=" + plantKey + "&q=" + searchParameters.search + "&edible=1&hardiness=1-13&page=" + pageNum;
@@ -106,6 +105,7 @@ var displayPlants = function (result) {
 
 
 var clickSearchList = function (event) {
+    if (event.target.matches("li")) {
     //set li id as the id number to use in url
     var idNumber = event.target.id
     //define url to use for plant cards
@@ -118,6 +118,6 @@ var clickSearchList = function (event) {
             // run function display plant card
             displayPlantCard(result);
         });
-}
+}}
 
 searchResults.addEventListener("click", clickSearchList);
