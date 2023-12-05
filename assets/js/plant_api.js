@@ -22,7 +22,6 @@ searchButton.addEventListener("click", function (event) {
 }
 })
 
-
 browseButton.addEventListener("click", function (event) {
   event.preventDefault()
   var buttonID = event.target.id;

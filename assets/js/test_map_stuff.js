@@ -3,7 +3,7 @@ const buttonEl = document.getElementById('locationButton');
 const inputEl = document.getElementById('locationInput');
 
 // File path for JSON data
-const filePath = '../docs/data.json';
+const filePath = '../assets/docs/data.json';
 
 // Fetching zip code data
 const zipCodeData = fetch(filePath)
