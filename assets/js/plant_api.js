@@ -22,22 +22,6 @@ searchButton.addEventListener("click", function (event) {
 }
 })
 
-locationButton.addEventListener("click", function (event) {
-  event.preventDefault()
-  
-  var buttonID = event.target.id;
-  if (!locationInput.value) {
-      return null
-  } else {
-      var searchParameters = {
-          button: buttonID,
-          search: locationInput.value
-      }
-      sessionStorage.setItem("searchParameterKey", JSON.stringify(searchParameters));
-      //window.location.href = "./results.html";
-  }
-  searchInput.text = "";
-})
 
 browseButton.addEventListener("click", function (event) {
   event.preventDefault()
