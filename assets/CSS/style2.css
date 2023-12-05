@@ -23,14 +23,27 @@ body{
 header {
     background-color: var(--darkRed);
     color:antiquewhite;
-    font-size: 50px;
     
 }
+h1{
+    font-size: 50px;  
+}
+nav{
+    margin-left:60%;
+    font-size: 30px;  
+    
+  }
+  .navOb{
+    color:var(--white); 
+    margin-left: 5px; 
+  }
 
 #list {
     background-color: var(--lightYellow);
 }
-
+.list-item{
+    background-color: var(--lightGreen);
+}
 
 
 #content {
@@ -45,14 +58,14 @@ header {
 .plantImage{
     background-color: var(--midMauve);
 }
-.plantInfo{
+.plantSpace{
     background-color: var(--lightYellow);
 }
-/* footer{
+
+footer{
     margin-top:auto; 
-    left:0px; 
-    right:0px;
- } */
+    
+ }
  .base{
     background-color: #0d7676;
  }

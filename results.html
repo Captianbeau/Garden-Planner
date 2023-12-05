@@ -17,13 +17,9 @@
 <body>
     <header class="level hero">
         <h1 class="hero-body">Garden Planner</h1>
-        <nav>
-            <div>
-                <a href="index.html">MAIN</a>
-            </div>          
-            <div ></div>
-                <a href="index.html">GARDENING TIPS</a>
-            </div>
+        <nav class="hero-foot navbar-menu">
+            <a href="index.html"class="navOb navbar-item">MAIN</a>
+            <a href="index.html"class="navOb navbar-item">GARDENING TIPS</a>
         </nav>
     </header>
     <div class="tile is-ancestor" >
@@ -37,7 +33,7 @@
         <main class="tile is-parent">
             <section class="tile is-child is-5 box" id="content">
                 <div class="tile is-parent is-vertical">
-                    <div class="titleTile tile is-child is-5 box">
+                    <div class="titleTile tile is-child is-7 box">
                     <h2 class=" list-title" id="card-title"></h2>
                     </div>
 
@@ -48,9 +44,10 @@
                     </div>   
                 </div>
             </section>
-          <p class="plantInfo tile is-child is-4 box"></p> 
-                  
+            <section class="plantSpace tile is-child is-4 box">
+          <p id="plantInfo"></p>        
         </main>
+        </div>
         <footer class="base footer">
         </footer>
 
