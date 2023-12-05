@@ -12,7 +12,7 @@ This website is designed to help users gather information for plants to put in t
 
 ## Link
 
-[Garden-Planner](https://www.example.com)
+[Garden-Planner](https://captianbeau.github.io/Garden-Planner/)
 
 ## Usage
 The search can be used by tying in the plant you want and clicking . It is recommended to not pluralize the name./
@@ -28,10 +28,11 @@ A plant can also be removed from favorites by clicking the this icon, on the fav
 To search without a specific plant click the browse button.\
 (said button) 
 
-   ![alt text](location)
-
 ## Credits
-
+node.js
+Perenual API
+Google geocodingAPI
+Bulma css framework
 William Rankin [wmr89](https://github.com/wmr89)\
 Theron Mitchell [tronmitch](https://github.com/tronmitch)\
 Adalia Lawrence [advlia](https://github.com/advlia)\
@@ -39,7 +40,11 @@ Darbie Rousseau [Captianbeau](https://github.com/Captianbeau)
 
 ## Screenshots
 Favorites page, results page, main page.
-   ![alt text](location)
+### Main Page
+   ![main-page](./assets/pictures/index.html.png)
+
+### Search Results Page
+![main-page](./assets/pictures/results.html.png)
 
 ## Future Development
 In furthering development we would like to add the following things:
@@ -48,21 +53,3 @@ In furthering development we would like to add the following things:
 - Cross pollination detection
 - Recommendations for where to buy plants
 - Increased number of plants to search
-
-
-## delete before deployment
-
-
-a place where you can search plants
-![wire-frame](./assets/pictures/Garden-PlannerWireFramemain-Full.png)
-![wire-frame2](./assets/pictures/Garden-PlannerWireFramefavsearch-Full.png)
-![potential colors](./assets/pictures/Potential-colorPalettes.png)
-[Google Docs](https://docs.google.com/document/d/183i1m0Yz83zrWknRm5Pk1fgyjXH8oIDhX5jT31TKE9k/edit)\
-[Google Sheet](https://docs.google.com/spreadsheets/d/1axL_XWlTvE2puyCHULknbcXuIYZ3ARxs6wklJdpfoPk/edit#gid=0)
-    
-    Will code 3: sk-lgBK656bbc410c0fd3277
-    Will Code 2: sk-dEiS6566b7ba813383181
-    Will Code 1:sk-5oBn655d7588a54043071
-    Darbie code 1: sk-s0yi6566b7ea6d0b63180
-    Theron Code: sk-qWo06566be1c917ee3070
-    Adalia code: sk-iFmN656e96499e2713317 (FOR DEPLOYMENT)
