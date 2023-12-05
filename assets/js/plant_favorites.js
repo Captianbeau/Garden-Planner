@@ -20,7 +20,7 @@ var searchResults = document.getElementById("searchResults");
 //Create function to display plants on search page
 var displayFavoritePlantsPage = function () {
     //For loop to display all results
-    if (!plantFavorites[0]) {
+    if (!plantFavorites || !plantFavorites[0]) {
         var noResultItem = document.createElement("li")
         noResultItem.setAttribute("class", "list-item tile is-child box")
         //create text for li
