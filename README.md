@@ -51,7 +51,7 @@ Darbie Rousseau [Captianbeau](https://github.com/Captianbeau)
 ![main-page](./assets/pictures/favorites.html.png)
 
 ## Future
-In furthering development we would like to add the following things:
+For future development we would like to add the following:
 - Refine search functionality
 - Placement recommendations
 - Cross pollination detection
